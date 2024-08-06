@@ -39,7 +39,7 @@ intro();
 cin >> numtt;
 numerro = puxanum();
 
-while (numerro = false)
+while (numerro = true)
 {
     intro();
     cin >> numtt;
