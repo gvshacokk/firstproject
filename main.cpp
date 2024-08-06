@@ -1,10 +1,9 @@
 #include <iostream>
-#include <conio.h>
 
 using std::cout, std::endl, std::cin;
 
 int numtt;
-bool numerro = false;
+bool numerro;
 
 
 
@@ -39,8 +38,7 @@ intro();
 cin >> numtt;
 numerro = puxanum();
 
-while (numerro = true)
-{
+while (numerro = true) {
     intro();
     cin >> numtt;
     cout << numerro;
