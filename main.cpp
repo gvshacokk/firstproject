@@ -1,33 +1,49 @@
 #include <iostream>
+#include <conio.h>
 
-using std::cout;
-using std::cin;
-using std::endl;
+using std::cout, std::endl, std::cin;
 
+int numtt;
+bool numerro = false;
+
+
+
+void intro(){
+    cout << "Voce é:\n";
+    cout << "1- Usuario novo\n";
+    cout << "2- Usuario já cadastrado\n";
+}
+
+bool puxanum(){
+if (numtt == 1){
+    cout << "Seja vamos iniciar o seu cadastro agora mesmo!!\n";
+    return false;
+}
+if (numtt == 2){
+    cout << "Seja bem vindo de volta!\n";
+    return false;
+}
+else
+    cout << "Por favor insira um valor valido\n";
+    return true;
+}
+
+void comeco(){
+
+}
 
 int main()
 {
-    //puxar usuario
-    cout << "Bem vindo ao banco XXXX" << endl;
-    cout << "Voce é:"<<endl;
-    cout << "1- Usuario novo"<<endl;
-    cout << "2- Usuario já cadastrado"<<endl;
-    int nreg;
-    cin >> nreg;
-    if (nreg == 1){
-        cout << "Seja vamos iniciar o seu cadastro agora mesmo!!";
-    }
-    if (nreg == 2){
-        cout << "Seja bem vindo!";
-    }
-    else
-    {
-        cout << "Por favor insira um valor valido";
-    }
+cout << "Bem vindo ao banco XXXX\n";
+intro();
+cin >> numtt;
+numerro = puxanum();
 
-
-
-
-system ("pause");
-return 0;
+while (numerro = false)
+{
+    intro();
+    cin >> numtt;
+    cout << numerro;
+    numerro = puxanum();
+}
 }
