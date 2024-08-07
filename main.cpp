@@ -3,7 +3,7 @@
 using std::cout, std::endl, std::cin;
 
 int numtt;
-bool numerro;
+char nome, senha;
 
 
 
@@ -27,8 +27,27 @@ else
     return true;
 }
 
-void comeco(){
+bool usernew(){
+     if (numtt == 1){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
 
+void comeco(){
+if (usernew()){
+    cout << "Insira os dados requeridos abaixo:\n";
+    cout << "Seu nome(por favor insira apenas um nome):\n";
+    cin >> nome;
+    cout << "Digite sua senha:\n";
+    cin >> senha;
+    }
+else{
+    cout << "Insira sua senha:\n";
+    cin >> senha;
+    }    
 }
 
 int main()
@@ -36,12 +55,10 @@ int main()
 cout << "Bem vindo ao banco XXXX\n";
 intro();
 cin >> numtt;
-numerro = puxanum();
 
-while (numerro = true) {
+while (puxanum()) {
     intro();
     cin >> numtt;
-    cout << numerro;
-    numerro = puxanum();
 }
+comeco();
 }
