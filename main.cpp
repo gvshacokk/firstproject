@@ -1,16 +1,27 @@
 #include <iostream>
+#define size 200
 
 using std::cout, std::endl, std::cin;
 
-int numtt;
-char nome, senha;
+int numtt, cpf[size], menu;
+char nome[size][50], senha[size][50]; 
+static int linha = 0;
 
 
 
-void intro(){
+void menu1(){
     cout << "Voce é:\n";
     cout << "1- Usuario novo\n";
     cout << "2- Usuario já cadastrado\n";
+}
+
+void menu2(){
+    cout << "O que deseja fazer agora?\n";
+    cout << "1- Fazer deposito\n";
+    cout << "2- Realizar saque\n";
+    cout << "3- Retirar extrato?\n";
+    cout << "4- Sair\n";
+    cin  >> menu;
 }
 
 bool puxanum(){
@@ -37,28 +48,37 @@ bool usernew(){
 }
 
 void comeco(){
-if (usernew()){
     cout << "Insira os dados requeridos abaixo:\n";
+if (usernew()){
     cout << "Seu nome(por favor insira apenas um nome):\n";
-    cin >> nome;
+    cin >> nome[linha];
     cout << "Digite sua senha:\n";
-    cin >> senha;
+    cin >> senha[linha];
+    linha++;
+    menu2();
     }
 else{
+    cout << "Insira seu cpf:\n";
+    cin >> cpf[linha];
     cout << "Insira sua senha:\n";
-    cin >> senha;
+    cin >> senha[linha];
     }    
+}
+
+void cadastro(){
+
 }
 
 int main()
 {
 cout << "Bem vindo ao banco XXXX\n";
-intro();
+menu1();
 cin >> numtt;
 
 while (puxanum()) {
-    intro();
+    menu1();
     cin >> numtt;
 }
 comeco();
+
 }
